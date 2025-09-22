@@ -223,6 +223,7 @@ import mongoose from "mongoose";
 import authRoutes from './routes/auth.js';
 import { router as requestRoutes } from './routes/requests.js'; 
 import userRoutes from './routes/userRoutes.js';
+import orderRoutes from './routes/orderRoutes.js';
 
 const app = express();
 
@@ -246,6 +247,7 @@ app.use('/uploads', express.static(uploadsDir));
 app.use('/api/auth', authRoutes);
 app.use('/api/requests', requestRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
 
 app.get("/api/ping", (req, res) => {
   res.json({ message: "pong" });

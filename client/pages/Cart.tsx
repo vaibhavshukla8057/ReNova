@@ -1,4 +1,4 @@
-import { useCart } from '../context/CartContext';
+import { useCart } from '../hooks/useCart';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
